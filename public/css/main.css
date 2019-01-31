@@ -32,13 +32,24 @@ p {
 
 /* Navigation */
 .navbar {
-  padding: 2.813rem 0 11.44rem 0; }
+  padding: 2rem 0; }
   .navbar .fa-angle-double-right {
     font-size: 1.75rem;
     color: #10c9c3; }
+  .navbar__fixed {
+    transition: all 0.5s ease; }
+  .navbar__-toggler:focus {
+    outline: none; }
 
-.navbar-toggler:focus {
-  outline: none; }
+.sticky {
+  position: fixed;
+  background-color: red;
+  top: 0;
+  -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.75);
+  transition: all 0.5s ease;
+  z-index: 99999; }
 
 .nav-item {
   padding-right: 0.5rem; }
@@ -63,7 +74,8 @@ p {
 .header {
   background-repeat: no-repeat; }
   .header__block {
-    margin-bottom: 12.5rem; }
+    margin-bottom: 6.25rem;
+    margin-top: 6.25rem; }
   .header__title {
     margin-bottom: 0;
     font-size: 2.375rem;
@@ -231,7 +243,7 @@ p {
 
 /* Testimonials */
 .testimonials {
-  padding: 11.25rem 0;
+  padding: 6.25rem 0;
   background-color: #10c9c3;
   color: #fff;
   font-weight: 400; }
@@ -243,6 +255,9 @@ p {
     font-size: 0.75rem;
     letter-spacing: 0.1em;
     text-transform: uppercase; }
+
+.owl-dot {
+  outline: none !important; }
 
 /* Companies */
 .companies {
@@ -303,3 +318,12 @@ p {
 @media screen and (max-width: 992px) {
   .navbar {
     padding-bottom: 1rem; } }
+
+@media screen and (max-width: 576px) {
+  body,
+  .process__text,
+  .process__types--text {
+    font-size: 0.9375rem; }
+  .header__text,
+  .testimonials__title {
+    font-size: 1rem; } }

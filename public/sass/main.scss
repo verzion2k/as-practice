@@ -22,13 +22,13 @@ p {
 #toTopBtn {
     display: none;
     position: fixed;
-    bottom: 20px; 
-    right: 30px; 
-    z-index: 99; 
-    border: none; 
-    outline: none; 
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
     background-color: $secondary-color;
-    color: #fff; 
+    color: #fff;
     cursor: pointer;
     padding: 0.9375rem;
     border-radius: 10px;
@@ -44,15 +44,28 @@ p {
 /* Navigation */
 
 .navbar {
-    padding: 2.813rem 0 11.44rem 0;
+    padding: 2rem 0;
     .fa-angle-double-right {
         font-size: 1.75rem;
         color: $secondary-color;
     }
+    &__fixed {
+        transition: all 0.5s ease;
+    }
+    &__-toggler:focus {
+        outline: none;
+    }
 }
 
-.navbar-toggler:focus {
-    outline: none;
+.sticky {
+    position: fixed;
+    background-color: red;
+    top: 0;
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.75);
+    transition: all 0.5s ease;
+    z-index: 99999;
 }
 
 .nav-item {
@@ -80,13 +93,13 @@ p {
     }
 }
 
-
 /* Header */
 
 .header {
     background-repeat: no-repeat;
     &__block {
-        margin-bottom: 12.5rem;
+        margin-bottom: 6.25rem;
+        margin-top: 6.25rem;
     }
     &__title {
         margin-bottom: 0;
@@ -113,7 +126,6 @@ p {
     }
 }
 
-
 /* About */
 
 .about {
@@ -130,7 +142,6 @@ p {
         max-width: 35%;
     }
 }
-
 
 /* Skills */
 
@@ -172,7 +183,6 @@ p {
         padding-left: 1rem;
     }
 }
-
 
 /* Work */
 
@@ -219,7 +229,6 @@ p {
     &__link:hover:after {
         opacity: 1;
     }
-    
     &__link:after {
         opacity: 0;
         content: "\f06e";
@@ -258,7 +267,6 @@ p {
         color: rgba($color: $font-color, $alpha: 0.5)
     }
 }
-
 
 /* Process */
 
@@ -310,7 +318,7 @@ p {
 /* Testimonials */
 
 .testimonials {
-    padding: 11.25rem 0;
+    padding: 6.25rem 0;
     background-color: $secondary-color;
     color: #fff;
     font-weight: 400;
@@ -324,6 +332,10 @@ p {
         letter-spacing: 0.1em;
         text-transform: uppercase;
     }
+}
+
+.owl-dot {
+    outline: none!important;
 }
 
 
@@ -402,10 +414,23 @@ p {
     }
 }
 
+
 /* Media Queries */
 
 @media screen and (max-width: 992px) {
-    .navbar { 
+    .navbar {
         padding-bottom: 1rem;
     }
-  }
+}
+
+@media screen and (max-width: 576px) {
+    body,
+    .process__text,
+    .process__types--text {
+        font-size: 0.9375rem;
+    }
+    .header__text,
+    .testimonials__title {
+        font-size: 1rem;
+    }
+}
