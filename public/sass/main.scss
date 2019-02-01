@@ -52,7 +52,7 @@ p {
     &__fixed {
         transition: all 0.5s ease;
     }
-    &__-toggler:focus {
+    &-toggler:focus {
         outline: none;
     }
 }

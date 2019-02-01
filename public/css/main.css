@@ -38,7 +38,7 @@ p {
     color: #10c9c3; }
   .navbar__fixed {
     transition: all 0.5s ease; }
-  .navbar__-toggler:focus {
+  .navbar-toggler:focus {
     outline: none; }
 
 .sticky {
